@@ -1,8 +1,8 @@
 import telebot
 from telebot import types
 
-TOKEN = "312719685:AAGjURfrXOxiY29FaLcRNiz9KvouANDAhv4"
-chat_id = '306350863'
+TOKEN = "Your Token"
+chat_id = 'Your Chat ID'
 
 bot = telebot.TeleBot(TOKEN)
 @bot.message_handler(commands=['start'])
