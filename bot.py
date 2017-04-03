@@ -1,13 +1,16 @@
 import telebot
 from telebot import types
 
-TOKEN = "Your Token"
-chat_id = 'Your Chat ID'
+import os
+
+TOKEN = "312719685:AAGjURfrXOxiY29FaLcRNiz9KvouANDAhv4"
+chat_id = '306350863'
 
 bot = telebot.TeleBot(TOKEN)
+
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-	bot.reply_to(message, "Oi,\ncomo posso te ajudar?")
+    bot.reply_to(message, "Oi, eu sou o Claudinho.\nComo posso te ajudar?")
 
 @bot.message_handler(commands=['help', 'commands'])
 def send_welcome(message):
