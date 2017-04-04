@@ -1,31 +1,20 @@
-import telebot
-from telebot import types
-
 import os
+import random
+import time
 
-TOKEN = "312719685:AAGjURfrXOxiY29FaLcRNiz9KvouANDAhv4"
-chat_id = '306350863'
+for i in range(1, 5):
+    greeting = random.choice(("Ei", "Oi", "Olá", "Papai, é você?"))
+    print(greeting)
+    str(os.system("BOT:" +greeting+ ""))
 
-bot = telebot.TeleBot(TOKEN)
+    answer = input("")
 
-@bot.message_handler(commands=['start'])
-def send_welcome(message):
-    bot.reply_to(message, "Oi, eu sou o Claudinho.\nComo posso te ajudar?")
+    if answer not in ("eae", "E aí"):
+        howICanHelpYou = random.choice(("Você não é meu pai mas como posso te ajudar?", "Como posso te ajudar?", "Então, como eu posso te ajudar?"))
+        print(howICanHelpYou)
+        os.system("BOT:" +howICanHelpYou+ ".")
 
-@bot.message_handler(commands=['help', 'commands'])
-def send_welcome(message):
-	bot.reply_to(message, "Os comandos não estão disponíveis!")
+    if "Caralho" or "Porra" or "Filho da Puta" or "Arrombado" or "fdp" or "Vai se fuder" or "vai se foder" or "vsf" in answer:
+        print("Seu palavrão foi desnecessário, jovem! ;-;")
 
-@bot.message_handler(commands=['about'])
-def send_welcome(message):
-	bot.reply_to(message, "Gabriel Kalani (@ogabriel) me criou\nGithub: https://github.com/gkal19")
-
-@bot.message_handler(commands=['irineu'])
-def send_welcome(message):
-	bot.reply_to(message, "Você não sabe e nem eu!")
-
-@bot.message_handler(commands=['mytoken'])
-def send_welcome(message):
-	bot.reply_to(message, "Token Público:\n 4101bef87:4fed986e95dfb5ed10e1a3f28aeaa074a3a")
-
-bot.polling()
+        break
