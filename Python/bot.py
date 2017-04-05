@@ -29,6 +29,7 @@ for i in range(1, 7):
         print("BOT:", howICanHelpYou)
         #os.system("BOT:" +howICanHelpYou+ ".")
 
+        print("BOT: Cuidado ao digitar os comandos, tenha certeza de que escreveu eles em letras minúsculas e sem caracteres")
 
     
     ## DEIXA GUARDADO    
@@ -38,7 +39,9 @@ for i in range(1, 7):
     """
     while 1:
 
-        commands = ("horario", "")
+        print("\nBOT: Comandos disponíveis:\nHorário\nSexo")
+            
+        commands = ("horario", "sexo", "")
         # O usuário digita qual comando quer usar
         chooseCommand = input("VOCÊ: ")
     
@@ -46,6 +49,7 @@ for i in range(1, 7):
         for command in commands:
             if command in chooseCommand:
                 cl = command
+                
             # Comando Horário
             if cl == "horario":
                 #Data
@@ -56,12 +60,24 @@ for i in range(1, 7):
                 minuto = dt.datetime.now().minute
                 #Imprime na tela a data, hora e minuto
                 print("Hoje é:", data, "\nE são:", hora, ":", minuto)
-            """
-            if cl == "nome":
-                data = date.today()
-                hora = dt.datetime.now().hour
-                minuto = dt.datetime.now().minute
-                print("Hoje é:", data, "\nE são:", hora, ":", minuto)
-            """    
+                
+            # Comando Sexo
+            if cl == "sexo":
+                print("BOT: Sexo online?\nIsso não me parece uma boa ideia.")
+                canTry = input("VOCÊ: ")
+
+                if "tentar" or "vamos lá" in canTry:
+                    print("BOT: Minha resposta ainda é não, além do mais eu não tenho um corpo para isso.")
+                    print("BOT: Vamos falar de outra coisa.")
+                if "tesão" in canTry:
+                    print("BOT: O que é Tesão?")
+                    whatIs = input("VOCÊ: ")
+
+                    if "não sei" in whatIs:
+                        print("Entendo.")
+                    else:
+                        print("Acho que entendi. Obrigado!")
+                
+                
     break
 
