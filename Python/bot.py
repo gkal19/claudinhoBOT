@@ -24,13 +24,12 @@ for i in range(1, 7):
     # Verifica qualquer outra resposta da saudação    
     if answer not in greeting:
         # O BOT pergunta ao usuário como ele poderia o ajudar aleatoriamente
-        howICanHelpYou = random.choice(("Você não é meu pai mas como posso te ajudar?", "Como posso te ajudar?", "Então, como eu posso te ajudar?"))
+        howICanHelpYou = random.choice(("Você não é meu pai, porém como euposso te ajudar?", "Como eu posso te ajudar?"))
         # Uma pergunta é impressa
         print("BOT:", howICanHelpYou)
         #os.system("BOT:" +howICanHelpYou+ ".")
 
         print("BOT: Cuidado ao digitar os comandos, tenha certeza de que escreveu eles em letras minúsculas e sem caracteres")
-
     
     ## DEIXA GUARDADO    
     """
@@ -40,7 +39,7 @@ for i in range(1, 7):
     while 1:
 
         print("\nBOT: Comandos disponíveis:\nHorário\nSexo")
-            
+        print("\n")
         commands = ("horario", "sexo", "")
         # O usuário digita qual comando quer usar
         chooseCommand = input("VOCÊ: ")
@@ -71,10 +70,10 @@ for i in range(1, 7):
                     print("BOT: Vamos falar de outra coisa.")
                 if "tesão" in canTry:
                     print("BOT: O que é Tesão?")
-                    whatIs = input("VOCÊ: ")
+                    whatIsIt = input("VOCÊ: ")
 
-                    if "não sei" in whatIs:
-                        print("Entendo.")
+                    if "não sei" and "não sei explicar" in whatIsIt:
+                        print("Que pena.")
                     else:
                         print("Acho que entendi. Obrigado!")
                 
