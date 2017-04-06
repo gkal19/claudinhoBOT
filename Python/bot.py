@@ -7,6 +7,8 @@ import datetime as dt #Importar datetime nomeado para dt
 from locale import setlocale #Importar setlocale de locale
 from datetime import date #Importar date de datatime
 
+joke = ["O garoto apanhou da vizinha, e a mãe furiosa foi tomar satisfação: Por que a senhora bateu no meu filho? Ele foi mal-educado, e me chamou de gorda. E a senhora acha que vai emagrecer batendo nele?"]
+
 for i in range(1, 7):
     # Vai escolher aleatoriamente entre essas saudações
     greeting = random.choice(("Ei", "Oi", "Olá", "Papai, é você?", "E aí", "kk eae men"))
@@ -39,18 +41,18 @@ for i in range(1, 7):
     
     while 1:
 
-        print("\nBOT: Comandos disponíveis:\nHorário\nSexo", "\n")
+        print("\nBOT: Comandos disponíveis:\nHorário\nSexo\nPiada", "\n")
         
-        commands = ("horario", "sexo")
+        commands = ("horario", "sexo", "piada")
         # O usuário digita qual comando quer usar
         chooseCommand = input("VOCÊ: ")
     
         cl = chooseCommand
            
         # Comando Inválido
-        if "horario" or "sexo" not in cl:
-            invalidCommand = random.choice(("Comando Inválido", "Talvez este comando não esteja indisponível.\nVocê também poderia verificar se não há algum erro de digitação."))
-            print("BOT:", invalidCommand)
+        #if "horario" or "sexo" or "piada" not in cl:
+        #    invalidCommand = random.choice(("Comando Inválido", "Talvez este comando não esteja disponível.\nVocê também poderia verificar se não há algum erro de digitação."))
+        #    print("BOT:", invalidCommand)
            
         # Comando Horário
         if cl == "horario":
@@ -80,7 +82,11 @@ for i in range(1, 7):
                     print("BOT: Que pena.")
                 else:
                     print("BOT: Acho que entendi. Obrigado!")
-                
-                
+        # Comando Piada
+        if cl == "piada":
+            print("BOT: Vou tentar fazer você rir. Não poderei fazer o mesmo já que não possuo emoções.")
+            jokes = random.choice((joke))
+            print("BOT:", jokes)
+            
     break
 
