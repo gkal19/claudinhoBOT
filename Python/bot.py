@@ -46,12 +46,12 @@ for i in range(1, 7):
         chooseCommand = input("VOCÊ: ")
     
         cl = chooseCommand
-        """    
+           
         # Comando Inválido
-        if cl != "horario" or "sexo":
-            print("BOT: Comando Inválido!")
-            print("BOT: Talvez este comando não esteja indisponível.\nVocê também poderia verificar se não há algum erro de digitação.")
-        """    
+        if "horario" or "sexo" not in cl:
+            invalidCommand = random.choice(("Comando Inválido", "Talvez este comando não esteja indisponível.\nVocê também poderia verificar se não há algum erro de digitação."))
+            print("BOT:", invalidCommand)
+           
         # Comando Horário
         if cl == "horario":
             #Data
@@ -67,10 +67,11 @@ for i in range(1, 7):
         if cl == "sexo":
             print("BOT: Sexo online?\nIsso não me parece uma boa ideia.")
             canTry = input("VOCÊ: ")
-
+            
             if "tentar" or "vamos lá" in canTry:
-                print("BOT: Minha resposta ainda é não, além do mais eu não tenho um corpo para isso.")
-                print("BOT: Vamos falar de outra coisa.")
+                    nope = random.choice(("Não possuo corpo algum para isso", "Vamos falar de outra coisa", "Você está me tirando, não é?"))
+                    print("BOT:", nope)
+                    
             if "tesão" in canTry:
                 print("BOT: O que é Tesão?")
                 whatIsIt = input("VOCÊ: ")
