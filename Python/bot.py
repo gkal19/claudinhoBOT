@@ -45,44 +45,40 @@ for i in range(1, 7):
         # O usuário digita qual comando quer usar
         chooseCommand = input("VOCÊ: ")
     
-        cl = ""
-        for command in commands:
-            if command in chooseCommand:
-                cl = command
-                
-            """    
-            # Comando Inválido
-            if cl != "horario" or "sexo":
-                print("BOT: Comando Inválido!")
-                print("BOT: Talvez este comando não esteja indisponível.\nVocê também poderia verificar se não há algum erro de digitação.")
-            """    
-            # Comando Horário
-            if cl == "horario":
-                #Data
-                data = date.today()
-                #Hora
-                hora = dt.datetime.now().hour
-                #Minuto
-                minuto = dt.datetime.now().minute
-                #Imprime na tela a data, hora e minuto
-                print("Hoje é:", data, "\nE são:", hora, ":", minuto)
-                
-            # Comando Sexo
-            if cl == "sexo":
-                print("BOT: Sexo online?\nIsso não me parece uma boa ideia.")
-                canTry = input("VOCÊ: ")
+        cl = chooseCommand
+        """    
+        # Comando Inválido
+        if cl != "horario" or "sexo":
+            print("BOT: Comando Inválido!")
+            print("BOT: Talvez este comando não esteja indisponível.\nVocê também poderia verificar se não há algum erro de digitação.")
+        """    
+        # Comando Horário
+        if cl == "horario":
+            #Data
+            data = date.today()
+            #Hora
+            hora = dt.datetime.now().hour
+            #Minuto
+            minuto = dt.datetime.now().minute
+            #Imprime na tela a data, hora e minuto
+            print("Hoje é:", data, "\nE são:", hora, ":", minuto)
+            
+        # Comando Sexo
+        if cl == "sexo":
+            print("BOT: Sexo online?\nIsso não me parece uma boa ideia.")
+            canTry = input("VOCÊ: ")
 
-                if "tentar" or "vamos lá" in canTry:
-                    print("BOT: Minha resposta ainda é não, além do mais eu não tenho um corpo para isso.")
-                    print("BOT: Vamos falar de outra coisa.")
-                if "tesão" in canTry:
-                    print("BOT: O que é Tesão?")
-                    whatIsIt = input("VOCÊ: ")
+            if "tentar" or "vamos lá" in canTry:
+                print("BOT: Minha resposta ainda é não, além do mais eu não tenho um corpo para isso.")
+                print("BOT: Vamos falar de outra coisa.")
+            if "tesão" in canTry:
+                print("BOT: O que é Tesão?")
+                whatIsIt = input("VOCÊ: ")
 
-                    if "não sei" and "não sei explicar" in whatIsIt:
-                        print("BOT: Que pena.")
-                    else:
-                        print("BOT: Acho que entendi. Obrigado!")
+                if "não sei" and "não sei explicar" in whatIsIt:
+                    print("BOT: Que pena.")
+                else:
+                    print("BOT: Acho que entendi. Obrigado!")
                 
                 
     break
