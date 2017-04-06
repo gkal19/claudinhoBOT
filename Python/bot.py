@@ -3,11 +3,10 @@ import random #Importar random
 import time #Importar time
 import locale #Importar locale
 import datetime as dt #Importar datetime nomeado para dt
+import subprocess
 
 from locale import setlocale #Importar setlocale de locale
 from datetime import date #Importar date de datatime
-
-joke = ["O garoto apanhou da vizinha, e a mãe furiosa foi tomar satisfação: Por que a senhora bateu no meu filho? Ele foi mal-educado, e me chamou de gorda. E a senhora acha que vai emagrecer batendo nele?"]
 
 for i in range(1, 7):
     # Vai escolher aleatoriamente entre essas saudações
@@ -85,8 +84,8 @@ for i in range(1, 7):
         # Comando Piada
         if cl == "piada":
             print("BOT: Vou tentar fazer você rir. Não poderei fazer o mesmo já que não possuo emoções.")
-            jokes = random.choice((joke))
+            jokes = str(proc.stdout.read().decode('utf8'))
+            jokes = random.choice(("O garoto apanhou da vizinha, e a mãe furiosa foi tomar satisfação: Por que a senhora bateu no meu filho? Ele foi mal-educado, e me chamou de gorda. E a senhora acha que vai emagrecer batendo nele?", "Na aula de química o professor pergunta:\n- Quais as principais reações do álcool?\n- Chorar pela ex, achar que esta rico, ficar valente e pegar mulher feia\n- Tirou 10!"))
             print("BOT:", jokes)
-            
     break
 
