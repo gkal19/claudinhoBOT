@@ -33,13 +33,15 @@ for i in range(1, 7):
     
     ## DEIXA GUARDADO    
     """
-    if "Caralho" or "Porra" or "Filho da Puta" or "Arrombado" or "fdp" or "Vai se fuder" or "vai se foder" or "vsf" == answer:
+    if "Caralho" or "Porra" in answer:
        print("Seu palavrão foi desnecessário, jovem! ;-;")
     """
+    
     while 1:
 
         print("\nBOT: Comandos disponíveis:\nHorário\nSexo", "\n")
-        commands = ["horario", "sexo", ""]
+        
+        commands = ("horario", "sexo")
         # O usuário digita qual comando quer usar
         chooseCommand = input("VOCÊ: ")
     
@@ -47,11 +49,12 @@ for i in range(1, 7):
         for command in commands:
             if command in chooseCommand:
                 cl = command
-                
+            """    
             # Comando Inválido
             if cl != "horario" or "sexo":
+                print("BOT: Comando Inválido!")
                 print("BOT: Talvez este comando não esteja indisponível.\nVocê também poderia verificar se não há algum erro de digitação.")
-                
+            """    
             # Comando Horário
             if cl == "horario":
                 #Data
@@ -71,14 +74,14 @@ for i in range(1, 7):
                 if "tentar" or "vamos lá" in canTry:
                     print("BOT: Minha resposta ainda é não, além do mais eu não tenho um corpo para isso.")
                     print("BOT: Vamos falar de outra coisa.")
-                elif "tesão" in canTry:
+                if "tesão" in canTry:
                     print("BOT: O que é Tesão?")
                     whatIsIt = input("VOCÊ: ")
 
                     if "não sei" and "não sei explicar" in whatIsIt:
-                        print("Que pena.")
+                        print("BOT: Que pena.")
                     else:
-                        print("Acho que entendi. Obrigado!")
+                        print("BOT: Acho que entendi. Obrigado!")
                 
                 
     break
