@@ -49,6 +49,7 @@ for i in range(1, 7):
         for command in commands:
             if command in chooseCommand:
                 cl = command
+                
             """    
             # Comando Inválido
             if cl != "horario" or "sexo":
