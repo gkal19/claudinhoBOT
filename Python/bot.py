@@ -42,9 +42,9 @@ for i in range(1, 7):
     
     while 1:
 
-        print("\nBOT: Comandos disponíveis:\nHorário\nSexo\nPiada\nSomar", "\n")
+        print("\nBOT: Comandos disponíveis:\nHorário\nSexo\nPiada\nSomar\nMultiplicar", "\n")
         
-        commands = ("horario", "sexo", "piada","somar")
+        commands = ("horario", "sexo", "piada","somar","multiplicar")
         # O usuário digita qual comando quer usar
         chooseCommand = input("VOCÊ: ")
     
@@ -104,6 +104,22 @@ for i in range(1, 7):
                     ChooseThreeSum2 = int(input("BOT: Escolha um outro número "))
                     ChooseThreeSum3 = int(input("BOT: Escolha um outro número "))
                     print("BOT: A soma de", ChooseThreeSum1, ",", ChooseThreeSum2, "e", ChooseThreeSum3, "é:", ChooseThreeSum1+ChooseThreeSum2+ChooseThreeSum3)
+        # Comando Multiplicar
+        if cl == "multiplicar":
+            multiplicar = random.choice(("Multiplicação também é comigo mesmo", "Venimim, que é sucesso rapá"))
+            print("BOT:", multiplicar)
+            print("BOT: Quantos números deseja multiplicar?\n2\n3")
+            howManyMultiplyAnswer = int(input("VOCÊ: "))
+            if howManyMultiplyAnswer == 2:
+                    ChooseTwoMultiply1 = int(input("BOT: Escolha um número "))
+                    ChooseTwoMultiply2 = int(input("BOT: Escolha um outro número "))
+                    print("BOT: A soma de", ChooseTwoMultiply1, "e", ChooseTwoMultiply2, "é:", ChooseTwoMultiply1*ChooseTwoMultiply2)
+                    
+            if howManyMultiplyAnswer == 3:
+                    ChooseThreeMultiply1 = int(input("BOT: Escolha um número "))
+                    ChooseThreeMultiply2 = int(input("BOT: Escolha um outro número "))
+                    ChooseThreeMultiply3 = int(input("BOT: Escolha um outro número "))
+                    print("BOT: A soma de", ChooseThreeMultiply1, ",", ChooseThreeMultiply2, "e", ChooseThreeMultiply3, "é:", ChooseThreeMultiply1*ChooseThreeMultiply2*ChooseThreeMultiply3)
             
             
             
