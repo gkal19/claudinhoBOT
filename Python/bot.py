@@ -24,6 +24,11 @@ for i in range(1, 7):
         # Após verificar, é imprimido "Você não é meu pai, porém como eu posso te ajudar?"
         print("BOT: Você não é meu pai, porém como eu posso te ajudar?")
 
+    # Verifica se o usuário digitou algo vazio
+    if "" in answer:
+        # Após verificar, é imprimido "Nada a declarar mesmo?"
+        print("BOT: Nada a declarar mesmo?")
+
     # Verifica qualquer outra resposta da saudação    
     if answer not in greeting:
         # O BOT pergunta ao usuário como ele poderia o ajudar aleatoriamente
