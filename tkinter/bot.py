@@ -2,15 +2,16 @@
 
 # -----------------------
 # Dependencies
-from tkinter import *
+import tkinter as tk
 
 # -----------------------
 # Variables
-window = Tk()
-
+window = tk.Tk()
 
 # -----------------------
 # Code
-Label(window, text="Olá").pack()
+window.title("BOT")
+window.geometry("640x400")
+window["background"] = "#14191F"
 
 window.mainloop()
