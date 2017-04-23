@@ -15,7 +15,7 @@ from datetime import date
 greeting = random.choice(("Oi", "Olá", "Papai, é você?", "E aí", "kk eae men", "Irineu"))
 howICanHelpYou = random.choice(("Precisa de ajuda em quê?", "Como eu posso te ajudar?"))
 
-commands = ("horario","piada","pesquisa","meuip","")
+commands = ("horario","piada","pesquisa","meuip","data","")
 
 data = date.today()
 hora = dt.datetime.now().hour
@@ -32,7 +32,7 @@ ip_address = socket.gethostbyname(socket.gethostname())
 # ----------------------------
 # Code
 print("Iniciando...")
-time.sleep(5)
+time.sleep(random.randint(1, 3))
 
 for i in range(1, 7):
     print("BOT:", greeting)
@@ -58,7 +58,11 @@ for i in range(1, 7):
         # Comando Inválido
         if cl not in commands:
             print("BOT: Comando Inválido!")
-
+            
+        # Comando Data
+        if cl == "data":
+            print("Hoje é:", data)
+            
         # Comando Horário
         if cl == "horario":
             print("Hoje é:", data)
@@ -73,7 +77,7 @@ for i in range(1, 7):
             print("BOT:", questionSearch)
             search = input("VOCÊ: ")
             print("No momento estou sem uma função para isso. Não esquenta que em alguns segundos vou mandar sua pesquisa para seu navegador.")
-            time.sleep(10)
+            time.sleep(random.randint(5, 7))
             webbrowser.open(tabUrl+search, new=new)
             
         # Comando IP
