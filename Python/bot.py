@@ -8,8 +8,7 @@ import socket
 import datetime as dt 
 import webbrowser
 
-from datetime import date 
-from pocketsphinx import LiveSpeech
+from datetime import date
 
 # ----------------------------
 # Variables
@@ -35,16 +34,9 @@ ip_address = socket.gethostbyname(socket.gethostname())
 print("Iniciando...")
 time.sleep(5)
 
-for p in LiveSpeech():
-    print(p)
-
 for i in range(1, 7):
     print("BOT:", greeting)
-    
-for answer in LiveSpeech():
-    print(answer)
-    
-    #answer = input("VOCÊ: ")
+    answer = input("VOCÊ: ")
 
     if greeting == "Papai, é você?":
         print("BOT: me enganei, você não é meu pai.")
