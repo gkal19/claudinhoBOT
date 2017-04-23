@@ -12,6 +12,7 @@ window = tk.Tk()
 # Code
 window.title("BOT")
 window.geometry("640x400")
+window.resizable(0,0)
 window["background"] = "#14191F"
 
 window.mainloop()
