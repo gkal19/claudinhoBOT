@@ -1,7 +1,7 @@
 #! /usr/bin/env Python
 
 # ----------------------------
-# Dependencies
+# Dependências
 import random
 import time
 import socket
@@ -14,7 +14,7 @@ import pygoogle
 from datetime import date
 from time import strftime
 # ----------------------------
-# Variables
+# Variáveis
 greeting = random.choice(("Oi", "Olá", "Papai, é você?", "E aí", "kk eae men", "Irineu"))
 howICanHelpYou = random.choice(("Precisa de ajuda em quê?", "Como eu posso te ajudar?"))
 
@@ -35,7 +35,7 @@ num_page = 3
 ip_address = socket.gethostbyname(socket.gethostname())
 
 # ----------------------------
-# Code
+# Código (começa abaixo)
 print("Iniciando...")
 time.sleep(random.randint(1, 3))
 
