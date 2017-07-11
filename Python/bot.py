@@ -95,6 +95,6 @@ for i in range(1, 7):
             elif platform.system() == "Windows" or platform.system() == "win32":
                 print("BOT: Você está usando",platform.system(), platform.release())
             elif platform.system() == "darwin":
-                print("BOT: Você está usando OS X", platform.system(), platform.release())
+                print("BOT: Você está usando", platform.system(), platform.release())
 
     break
