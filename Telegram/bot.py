@@ -27,8 +27,8 @@ def restart(bot, update):
 	update.message.reply_text("MENTIRA!")
 
 def ping(bot, update):  
-        update.message.reply_text("PING PONG É O CARALHO!")
-	
+        update.message.reply_text(emojize('PING PONG É O CARALHO! :rage:', use_aliases=True))
+
 def chat(bot, update):
     chat_id = update.message.chat_id
     message = update.message.text
@@ -38,7 +38,7 @@ def chat(bot, update):
     if ('manda' and 'piada' in message) or ('conta' and 'piada' in message):
             update.message.reply_text("Não sou bom com piadas...")
 
-updater = Updater('TOKEN')
+updater = Updater('370114347:AAENNjeGeiNuT4aSCj7Su_LKxEJMBB5SfU4')
 updater.dispatcher.add_handler(CommandHandler('start', start))
 updater.dispatcher.add_handler(CommandHandler('mytoken', mytoken))
 updater.dispatcher.add_handler(CommandHandler('restart', restart))
